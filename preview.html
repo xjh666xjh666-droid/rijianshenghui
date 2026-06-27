@@ -3,227 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>别让孩子用几年的青春，读一个正在被AI替代的专业</title>
+<title>我们给550个大学专业打了AI替代分，结果有些意外</title>
 <style>
-  :root {
-    --text: #2d2d2d;
-    --accent: #E8590C;
-  }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    font-size: 15px; line-height: 1.75; color: var(--text); background: #f5f5f5;
+    font-size: 15px; line-height: 1.75; color: #2d2d2d; background: #f5f5f5;
     -webkit-font-smoothing: antialiased;
   }
-
-  .phone-frame {
-    max-width: 420px; margin: 20px auto; background: #fff;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-    overflow: hidden;
-  }
-
-  .wechat-header {
-    padding: 12px 16px; font-size: 13px; color: #999; text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .article-header {
-    padding: 28px 20px 16px;
-  }
-  .article-header h1 {
-    font-size: 22px; font-weight: 800; line-height: 1.4; color: #1a1a1a;
-    letter-spacing: 0.3px; margin-bottom: 10px;
-  }
-  .article-header .meta {
-    font-size: 12px; color: #bbb; display: flex; align-items: center; gap: 8px;
-  }
+  .phone-frame { max-width: 420px; margin: 20px auto; background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.1); overflow: hidden; }
+  .wechat-header { padding: 12px 16px; font-size: 13px; color: #999; text-align: center; border-bottom: 1px solid #f0f0f0; }
+  .article-header { padding: 28px 20px 16px; }
+  .article-header h1 { font-size: 21px; font-weight: 800; line-height: 1.4; color: #1a1a1a; letter-spacing: 0.3px; margin-bottom: 10px; }
+  .article-header .meta { font-size: 12px; color: #bbb; display: flex; align-items: center; gap: 8px; }
   .article-header .meta .author { color: #576b95; font-weight: 600; }
-
-  .article-body {
-    padding: 0 20px 10px;
-  }
-  .article-body p {
-    margin-bottom: 14px; text-align: justify; letter-spacing: 0.2px;
-  }
+  .article-body { padding: 0 20px 10px; }
+  .article-body p { margin-bottom: 14px; text-align: justify; letter-spacing: 0.2px; }
   .article-body p strong { color: #1a1a1a; font-weight: 700; }
-  .article-body h2 {
-    font-size: 18px; font-weight: 800; color: #1a1a1a; margin: 36px 0 12px;
-    line-height: 1.35;
-  }
-
-  .article-body .img-wrap {
-    margin: 20px -20px; text-align: center;
-  }
-  .article-body .img-wrap img {
-    width: 100%; height: auto; display: block;
-  }
-
+  .article-body h2 { font-size: 18px; font-weight: 800; color: #1a1a1a; margin: 36px 0 12px; line-height: 1.35; }
+  .article-body .img-wrap { margin: 20px -20px; text-align: center; }
+  .article-body .img-wrap img { width: 100%; height: auto; display: block; }
   .article-body hr { border: none; border-top: 1px solid #f0f0ec; margin: 28px 0; }
-
-  .highlight-box {
-    background: linear-gradient(135deg, #fff9f5, #fff); border-left: 3px solid var(--accent);
-    border-radius: 6px; padding: 16px 18px; margin: 18px 0;
-  }
+  .article-body blockquote { border-left: 3px solid #E8590C; margin: 18px 0; padding: 10px 14px; background: #fffdf8; border-radius: 0 6px 6px 0; font-size: 14px; color: #666; }
+  .highlight-box { background: linear-gradient(135deg, #fff9f5, #fff); border-left: 3px solid #E8590C; border-radius: 6px; padding: 16px 18px; margin: 18px 0; }
   .highlight-box p { margin-bottom: 6px; font-size: 14px; }
-
-  .article-footer {
-    padding: 0 20px 24px; text-align: center;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  .article-footer .golden {
-    font-size: 17px; font-weight: 800; color: #1a1a1a; line-height: 1.6;
-    padding: 16px; background: #fafaf7; border-radius: 8px; margin-bottom: 16px;
-  }
-  .article-footer .golden em { color: var(--accent); font-style: normal; }
-  .article-footer .sources {
-    font-size: 11px; color: #ccc; line-height: 1.6; text-align: left;
-    padding: 12px; background: #fafaf8; border-radius: 6px; margin-bottom: 16px;
-  }
-  .article-footer .cta {
-    font-size: 14px; color: #576b95; font-weight: 600;
-  }
-
-  @media (min-width: 768px) {
-    .phone-frame { margin: 30px auto; }
-  }
+  .compare-table { margin: 18px 0; font-size: 13px; border-collapse: collapse; width: 100%; }
+  .compare-table td, .compare-table th { padding: 8px 10px; border: 1px solid #eee; text-align: center; }
+  .compare-table .red-bg { background: #fff0f0; color: #c0392b; }
+  .compare-table .green-bg { background: #f0fff4; color: #27ae60; }
+  .article-footer { padding: 0 20px 24px; text-align: center; max-width: 100%; overflow: hidden; }
+  .article-footer .golden { font-size: 17px; font-weight: 800; color: #1a1a1a; line-height: 1.6; padding: 16px; background: #fafaf7; border-radius: 8px; margin-bottom: 16px; }
+  .article-footer .sources { font-size: 11px; color: #ccc; line-height: 1.6; text-align: left; padding: 12px; background: #fafaf8; border-radius: 6px; margin-bottom: 16px; }
+  .article-footer .cta { font-size: 14px; color: #576b95; font-weight: 600; margin-bottom: 6px; }
 </style>
 </head>
 <body>
-
 <div class="phone-frame">
-
   <div class="wechat-header">日建生辉</div>
-
   <div class="article-header">
-    <h1>别让孩子用几年的青春，读一个正在被AI替代的专业</h1>
-    <div class="meta">
-      <span class="author">日建生辉</span>
-      <span>2026年6月27日 08:30</span>
-    </div>
+    <h1>我们给550个大学专业打了AI替代分，结果有些意外</h1>
+    <div class="meta"><span class="author">日建生辉</span><span>2026年6月27日 08:30</span></div>
   </div>
-
   <div class="article-body">
 
-    <p>最近高考分数刚出来，好几个朋友都在给我发微信。说孩子今年参加了高考——考得好的自然开心，考得差的就更加揪心。马上要填报志愿了，但无一例外，都对报什么样的专业感到困惑，想听听我的意见。</p>
+<div class="img-wrap"><img src="01-封面.png" alt="封面"></div>
 
-    <p>说实话，我被问得也心里没底。所以我花了两天时间，把麦肯锡、世界经济论坛、Anthropic、Pew研究中心最新的报告还有几篇学术论文翻了一遍。</p>
-    <p>看完之后，我发现网上传的那些"AI专业红黑榜"，大部分不靠谱。</p>
-    <p>下面我说的，每一组数据都有来源。不确定的地方我会直接说"这个存疑"。</p>
+<blockquote><strong>⚠️ 看表之前，请先读完这一段：</strong><br><br>
+这个评分评的是"最普通的毕业生，干着最常规的岗位"。<br><br>
+同一个4.8分的专业，有人被AI追着跑，有人带团队做决策年薪翻三倍。同一个1.5分的专业，有人重复基础操作混日子，十年后也被替代了。<br><br>
+AI替代的从来不是"专业名字"，而是<strong>你每天具体在干什么</strong>。</blockquote>
 
-    <div class="img-wrap">
-      <img src="01-封面.png" alt="封面">
-    </div>
+<div class="img-wrap"><img src="04-AI替什么.png" alt="AI替什么vs不替什么"></div>
 
-    <h2>一、先说一个最违反直觉的结论</h2>
-    <p>你是不是也听过这句话："AI最先干掉的肯定是文科生，学好数理化，走遍天下都不怕。"</p>
-    <p>这个说法不是全错，但它把问题简化到危险的程度。</p>
+<div class="img-wrap"><img src="03-风险全景图.png" alt="风险分布"></div>
 
-    <p><strong>我查到一个数据，当时看完愣了半分钟。</strong></p>
-    <p>Anthropic——你手机上的Claude就是他们做的——2025年初发布了一份报告，分析了平台上几千万条真实对话，看哪些职业的人正在被AI替代。</p>
-    <p>第一名是谁？</p>
-    <p><strong>计算机和数学类职业，占了全部AI工作对话的37.2%。</strong>而这类人在全美劳动力里只占3.4%。</p>
-    <p>换句话说，AI现在替代最厉害的，不是文科生——是写代码的、做数据的、搞技术的那帮人自己。</p>
-    <p>AI写代码、调bug、生成文档，这些活儿以前是初级程序员干的，现在AI上手了。你以为学计算机就安全？不好意思，AI先啃的就是你这一块。</p>
+<div class="img-wrap"><img src="02-评分维度.png" alt="评分维度"></div>
 
-    <div class="img-wrap">
-      <img src="02-AI使用分布.png" alt="AI替代最厉害的不是文科">
-    </div>
+<h2>🔴 极高风险区（4.5-5.0）</h2>
+<p>共同特征：产出标准、流程可编码、屏幕里完成、初级岗先挨刀。</p>
 
-    <p>再看麦肯锡2025年追了400家企业的真实用人数据，AI用上两年以后，哪些岗位被砍了？</p>
-    <p>数据录入少了23%。基础财务分析少了18%。一线客服少了14%。初级研究分析少了11%。</p>
-    <p>这些岗位的共同点是什么？不是"文科"——是<strong>你的活儿全在屏幕里面。信息进，信息出，不需要站到真人面前。</strong></p>
+<table class="compare-table">
+<tr><td class="red-bg">信息管理与信息系统</td><td class="red-bg"><strong>5.0</strong></td><td>全国撤160布点，第一</td></tr>
+<tr><td class="red-bg">基础翻译/英语(非师范)</td><td class="red-bg"><strong>5.0</strong></td><td>GPT暴露度0.82</td></tr>
+<tr><td class="red-bg">公共事业管理</td><td class="red-bg"><strong>4.8</strong></td><td>撤138布点</td></tr>
+<tr><td class="red-bg">市场营销(通用)</td><td class="red-bg"><strong>4.8</strong></td><td>撤104布点</td></tr>
+<tr><td class="red-bg">基础会计/审计</td><td class="red-bg"><strong>4.8</strong></td><td>86%记账可自动化</td></tr>
+<tr><td class="red-bg">秘书学</td><td class="red-bg"><strong>4.8</strong></td><td>AI日程+文档+纪要</td></tr>
+<tr><td class="red-bg">广告学</td><td class="red-bg"><strong>4.7</strong></td><td>AI素材+投放</td></tr>
+<tr><td class="red-bg">编辑出版学</td><td class="red-bg"><strong>4.7</strong></td><td>AI写稿排版</td></tr>
+<tr><td class="red-bg">工商管理(通用)</td><td class="red-bg"><strong>4.5</strong></td><td>泛而不精</td></tr>
+</table>
 
-    <div class="img-wrap">
-      <img src="03-企业岗位变化.png" alt="企业岗位变化">
-    </div>
+<blockquote>⚠️ 这个区的专业不是死刑。从"执行者"变成"决策者"，AI风险从5.0降到2.5。</blockquote>
 
-    <p>同期呢？需要跟人打交道的岗位反而在涨。AI辅助的销售经理涨了19%，复杂问题客户经理涨了12%。</p>
-    <p><strong>所以不是"学文危险、学理安全"。是——你的工作离真人越远、离屏幕越近，AI离你就越近。</strong></p>
-    <p>还有个事更扎心。斯坦福大学的研究人员发现，22到25岁的年轻人，在高AI暴露的职业里就业已经掉了6%-13%。最惨的是初级软件工程师——从2022年底到现在，22到25岁的就业掉了将近20%。<strong>但35岁以上的老手呢？同样类型的岗位，就业还在涨。</strong></p>
-    <p>你品品。AI不是不吃编程。它是先吃最嫩的——初级岗位，任务清楚、标准明确、不需要太多判断。能搞定复杂系统、能跟业务方撕需求的老手，目前还没事。</p>
+<h2>🟠 高风险区（4.0-4.4）</h2>
+<table class="compare-table">
+<tr><td>软件工程</td><td><strong>4.5</strong></td><td>初级↓~20%</td></tr>
+<tr><td>信用管理</td><td><strong>4.5</strong></td><td>ATE 0.43-0.47</td></tr>
+<tr><td>商务英语</td><td><strong>4.3</strong></td><td>AI翻译已替代</td></tr>
+<tr><td>网络工程</td><td><strong>4.3</strong></td><td>AI运维</td></tr>
+<tr><td>物联网工程</td><td><strong>4.2</strong></td><td>标准化连接AI化</td></tr>
+<tr><td>财务管理</td><td><strong>4.2</strong></td><td>报表分析AI化</td></tr>
+<tr><td>电子商务</td><td><strong>4.0</strong></td><td>AI运营+客服</td></tr>
+<tr><td>物流管理</td><td><strong>4.0</strong></td><td>AI路径优化</td></tr>
+</table>
 
-    <hr>
+<div class="img-wrap"><img src="05-五个规律.png" alt="五个规律"></div>
 
-    <h2>二、好了，说点实用的。到底哪些专业要慎重，哪些可以放心报？</h2>
-    <p>我把几份报告和论文的数据交叉比对了一遍，拉了两张清单。</p>
-    <p>先说明：这不是算命，是我根据现有数据做的最诚恳的判断。每一条都标了证据强弱——🔴强就是数据已经验证过了，🟡中是暴露高但有其他因素在减速。</p>
+<div class="img-wrap"><img src="06-同专业不同命.png" alt="同专业不同命"></div>
 
-    <div class="img-wrap">
-      <img src="04-慎重区清单.png" alt="慎重区清单">
-    </div>
+<div class="img-wrap"><img src="07-极低风险区.png" alt="极低风险区"></div>
 
-    <div class="img-wrap">
-      <img src="05-安心区清单.png" alt="安心区清单">
-    </div>
+<h2>⭐ 极低风险区（1.0-1.9）</h2>
+<p>共同特征：<strong>出了事要死人，AI负不了责。</strong></p>
+<table class="compare-table">
+<tr><td class="green-bg">临床医学</td><td class="green-bg"><strong>1.0</strong></td><td>诊断+治疗+责任</td></tr>
+<tr><td class="green-bg">口腔医学</td><td class="green-bg"><strong>1.0</strong></td><td>精细手工+判断</td></tr>
+<tr><td class="green-bg">护理学</td><td class="green-bg"><strong>1.0</strong></td><td>70%任务难自动化</td></tr>
+<tr><td class="green-bg">助产学</td><td class="green-bg"><strong>1.0</strong></td><td>分娩必有人在场</td></tr>
+<tr><td class="green-bg">消防指挥</td><td class="green-bg"><strong>1.0</strong></td><td>火灾现场判断</td></tr>
+<tr><td class="green-bg">弹药工程</td><td class="green-bg"><strong>1.0</strong></td><td>弹药+爆炸</td></tr>
+<tr><td class="green-bg">麻醉学</td><td class="green-bg"><strong>1.3</strong></td><td>术中实时容错零</td></tr>
+<tr><td class="green-bg">刑事科学技术</td><td class="green-bg"><strong>1.3</strong></td><td>现场勘查+物证</td></tr>
+</table>
 
-    <p>光看表有一个问题。你会注意到"数学/物理/统计"和"基础编程"明明都是理科，一个在安心区一个在慎重区。</p>
-    <p>差别在哪？<strong>任务类型。</strong></p>
-    <p>基础编程每天干嘛？写接口、改bug、调样式。规则清楚，输入输出都在屏幕里，训练数据满大街都是——AI学个90分不难。</p>
-    <p>学数学每天干嘛？面对一团混乱的未知，想办法把它定义成一个可以回答的问题。AI现阶段最怕的就是这个——没人告诉它"问题是什么"的时候，它就歇菜了。</p>
-    <p>所以，<strong>不是文科vs理科。是"定义问题的能力"vs"执行标准流程的能力"。</strong>你的专业教你哪个，比专业叫什么名字重要得多。</p>
+<hr>
 
-    <hr>
-
-    <div class="img-wrap">
-      <img src="06-暴露不等于替代.png" alt="暴露不等于替代">
-    </div>
-
-    <h2>三、所以填志愿的时候，我问了自己三个问题，也分享给你</h2>
-
-    <div class="img-wrap">
-      <img src="07-三个问题.png" alt="三个问题">
-    </div>
-
-    <div class="highlight-box">
-      <p><strong>第一句：这个专业，是教你怎么"想问题"，还是教你怎么"做流程"？</strong></p>
-      <p>你去学校官网翻课程表。如果四年大部分时间在学"背规范、走流程、按模板出结果"——警惕。这些东西AI学得比你快。如果大量时间是"讨论案例、做判断、解决没有标准答案的问题"——稳。</p>
-    </div>
-
-    <div class="highlight-box">
-      <p><strong>第二句：它把你往"真人"那边推，还是把你锁在"屏幕"后面？</strong></p>
-      <p>长江商学院调研2000多家企业："未来三到五年什么岗位最稳？"排第一是<strong>销售，18.2%</strong>。AI能生成一百条话术，但客户签不签看的是"我信不信面前这个人"。</p>
-    </div>
-
-    <div class="highlight-box">
-      <p><strong>第三句：不管你学什么，以后都得跟AI一起干活。你准备好了吗？</strong></p>
-      <p>安全感不是来自"找一个AI碰不到的专业"。讲实话，这种东西不存在。安全感来自<strong>"不管我学什么，我都知道怎么用AI让自己的本事加倍"。</strong></p>
-    </div>
-
-    <hr>
-
-    <h2>四、最后说几句掏心窝子的话</h2>
-
-    <p><strong>别冲着"人工智能"四个字报专业。</strong></p>
-    <p>今年全国高校哗啦啦新开了406个AI专业点。看着猛吧？但你冷静想——很多是去年刚搭起来的。师资从计算机系拼凑，教材今年现编，实验室设备可能还没拆箱。你孩子进去读四年，出来跟"数学系本科加自学AI的人"比，底子谁硬？</p>
-    <p>除非是头部985、真有实验室和产业合作。否则，<strong>数学、统计、物理、计算机科学这些基础学科，先打底子，研究生再切AI，稳得多。</strong></p>
-    <p>WEF那个报告有句话我印象极深：<strong>到2030年，现在39%的核心技能会过时。</strong>不是变，是直接淘汰。所以别纠结"四年后就业率几个百分点"——没人猜得准。选那个让你能一直学新东西、一直适应变化的方向。</p>
-
-    <hr>
-
-    <p>昨晚帮朋友分析完，他问了我最后一句："所以你给个干脆的。"</p>
-    <p>我想了想，说了一句话。今天也送给你：</p>
+<h2>⚠️ 比整张表都重要</h2>
+<p>AI替代的从来不是一个"专业名字"。它替代的是<strong>"可以被编码的重复性执行工作"</strong>。</p>
+<p>临床医学1分，但如果你只负责量血压录数据，AI替你不难。软件工程4.5分，但如果你做架构设计带团队，AI拿你没辙。</p>
+<p><strong>不管你报了哪个专业——你在方向里站到了哪个位置，是顶层的判断者，还是底层的执行者，才决定了你最后会不会被替代。</strong></p>
 
   </div>
 
   <div class="article-footer">
     <img src="08-金句收束.png" alt="金句" style="width:100%; height:auto; display:block;">
     <div class="golden" style="margin-top:16px;">
-      专业名字贴在你简历上<em>四年</em>。<br>
-      底层能力跟你走<em>一辈子</em>。<br>
-      填志愿的时候，把这句话刻在脑子里。
+      专业名字贴四年。<br>
+      你练成什么样的人，跟你一辈子。
     </div>
     <div class="sources">
-      <strong>数据来源：</strong>McKinsey Global Institute / Anthropic Economic Index / WEF 2025 / Pew Research / Harvard Business School / Stanford Digital Economy Lab / Gao & Huang 2026 / Gupta & Kumar 2026 / Colombo et al. IJCAI 2025 / 教育部 & 麦可思研究院 / Goldman Sachs / 普华永道 / 长江商学院
+      <strong>数据来源：</strong>McKinsey Global Institute / Anthropic Economic Index / WEF 2025 / Pew Research / Harvard Business School / Stanford Digital Economy Lab / Gao & Huang (2026) / Gupta & Kumar (2026) / Colombo et al. (IJCAI 2025) / 教育部 & 麦可思研究院 / Goldman Sachs
     </div>
-    <p class="cta">觉得有用？转给正在发愁的朋友。<br>关注我，每日学习，躬身实践，建设辉煌人生。</p>
+    <p class="cta">觉得有用？转给正在发愁的朋友。</p>
+    <p class="cta">关注我，每日学习，躬身实践，建设辉煌人生。</p>
     <div style="text-align:center; margin-top:12px;">
       <p style="font-size:12px; color:#bbb; margin-bottom:8px;">扫码加微信 ↓</p>
       <img src="微信二维码.png" alt="微信二维码" style="max-width:160px; width:100%; height:auto; border-radius:8px;">
     </div>
   </div>
-
 </div>
-
 </body>
 </html>
